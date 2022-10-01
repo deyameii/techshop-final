@@ -21,6 +21,7 @@
   <!--  font awesome-->
   <script src="https://kit.fontawesome.com/5a3878ed59.js" crossorigin="anonymous"></script>
 </head>
+
 <!--body-->
 <body class="text-base m-0 min-h-full min-w-320 font-sans">
 <div class="overflow-hidden">
@@ -39,7 +40,7 @@
   </div>
 <!--  top header-->
 <!-- header-->
-<header class="bg-[#272941] h-24 flex items-center">
+<header class="bg-[#272941] h-24 flex items-center border-b-2 border-indigo-500">
   <div class="container my-0 mx-auto py-0 px-4 max-w-7xl flex items-center gap-28">
     <img src="src/resources/img/logo.png" alt="logo" class="mt-1.5">
     <div class="w-[750px] py-[15px] px-0">
@@ -58,7 +59,7 @@
         </label>
         <button class="w-[90px] bg-purple-200 py-2 mb-[5px] rounded-r-md">Поиск</button>
       </form>
-    </div>
+    </div> 
     <div class="relative flex flex-col items-center gap-2 text-white">
       <div class="absolute right-0.5 top-[-10px] w-5 h-5 leading-5 text-center rounded-full text-xs text-white bg-[#9591e1]">2</div>
       <i class="fa-solid fa-basket-shopping"></i>
@@ -66,6 +67,18 @@
     </div>
   </div>
 </header>
+
+<nav class="bg-slate-100 font-medium">
+  <div class="container my-0 mx-auto py-4 px-4 max-w-7xl flex gap-28 justify-center">
+  <ul class="flex gap-24 items-center">
+    <li><a href="" class="hover:text-purple-500">Главная</a></li>
+    <li><a href="" class="hover:text-purple-500">Каталог</a></li>
+    <li><a href="" class="hover:text-purple-500">О нас</a></li>
+    <li><a href="" class="hover:text-purple-500">Отзывы</a></li>
+  </ul>
+  </div>
+</nav>
+
 </div>
 </body>
 </html>
