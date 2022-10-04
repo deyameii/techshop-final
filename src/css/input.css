@@ -20,6 +20,7 @@
     }
 }
 /*product*/
-
-
+.item-item {
+    transition: 0.3s ease-in-out;
+}
 

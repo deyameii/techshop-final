@@ -5,7 +5,7 @@
       <?php foreach ($products as $product): ?>
 
         <div
-          class='item w-64 h-72 shadow-2xl opacity-75 h-[530px] flex flex-col justify-center items-center gap-8 p-4'>
+          class='item-item w-64 h-72 shadow-2xl opacity-75 h-[530px] flex flex-col justify-center items-center gap-8 p-4 hover:transform hover:scale-105 hover:'>
           <div class='img w-[224px] h-[224px]'>
             <img class='w-full' src='../src/resources/img/products/<?= $product['img'] ?>' alt=''>
           </div>
