@@ -10,9 +10,9 @@
   <?php require "partials/content.php"; ?>
   <?php require "partials/footer.php"; ?>
 </div>
+<div id='qwe' test='test'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam amet animi aut corporis
+  culpa, debitis ipsa mollitia nulla quidem rem rerum saepe, sed sit tenetur vitae voluptatibus? Corporis, perferendis.
+</div>
 <!--  scripts-->
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-<script src="src/js/swiper.js"></script>
-<script src="src/js/login.js"></script>
-
+<?php require "partials/scripts.php"; ?>
 </body>

@@ -12,16 +12,16 @@ $statement->execute(['email' => $email]);
 $user = $statement->fetch(PDO::FETCH_ASSOC);
 
 if (!$user) {
-    $_SESSION['error'] = 'Неверный логин или пароль!';
-    header('Location: ../../index.php');
-    exit;
+  $_SESSION['error'] = 'Неверный логин или пароль!';
+  header('Location: ../../index.php');
+  exit;
 }
 if ($user['password'] !== $password) {
-    $_SESSION['error'] = 'Неверный логин или пароль';
-    header('Location: ../../index.php');
-    exit;
+  $_SESSION['error'] = 'Неверный логин или пароль';
+  header('Location: ../../index.php');
+  exit;
 }
 
-$_SESSION['user'] = ['email' => $user['email'], 'id' => $user['id']];
+$_SESSION['user'] = ['email' => $user['email'], 'id' => $user['id'], 'is_admin' => $user['is_admin']];
 header('Location: ../../index.php');
 exit;
