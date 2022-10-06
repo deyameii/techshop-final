@@ -33,12 +33,16 @@
       <img src="src/resources/img/logo.png" alt="logo" class="mt-1.5">
     </a>
 
-    <div class="relative flex flex-col items-center gap-2 text-white">
-      <div
-        class="absolute right-0.5 top-[-10px] w-5 h-5 leading-5 text-center rounded-full text-xs text-white bg-[#9591e1]"></div>
-      <i class="fa-solid fa-basket-shopping"></i>
-      <div>Корзина</div>
-    </div>
+    <a href='basket.php'>
+      <div class="relative flex flex-col items-center gap-2 text-white">
+        <div
+          class="absolute right-0.5 top-[-10px] w-5 h-5 leading-5 text-center rounded-full text-xs text-white bg-[#9591e1]"
+        ><?= $_SESSION['cart.qty'] ?? 0 ?>
+        </div>
+        <i class="fa-solid fa-basket-shopping"></i>
+        <div>Корзина</div>
+      </div>
+    </a>
   </div>
 
 

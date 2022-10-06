@@ -17,5 +17,15 @@ if (isset($_GET['cart'])) {
         echo json_encode(['code' => 'ok', 'answer' => $product]);
       }
       break;
+
+    case "clear":
+      if (!empty($_SESSION['cart'])) {
+        unset($_SESSION['cart']);
+        unset($_SESSION['cart.sum']);
+        unset($_SESSION['cart.qty']);
+      }
+      require __DIR__ . '/basket.php';
+      break;
+
   }
 }
