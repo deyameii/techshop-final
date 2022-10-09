@@ -1,6 +1,6 @@
 <div class='bg-white flex flex-col items-center py-12'>
   <h2 class='text-2xl'>Каталог товаров</h2>
-  <div class="container my-0 mx-auto py-12 px-4 max-w-7xl flex gap-12">
+  <div class="container my-0 mx-auto py-12 px-4 max-w-7xl flex gap-12 flex-wrap">
     <?php if (!empty($products)): ?>
       <?php foreach ($products as $product): ?>
 

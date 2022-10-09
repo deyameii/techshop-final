@@ -9,7 +9,7 @@ $products = get_products();
 <!--head-->
 <?php require 'partials/head.php' ?>
 <div class='text-white text-sm font-medium'>
-
+  <!--TODO убрать-->
   <?php debug($_SESSION); //session_destroy(); ?>
 
 </div>
@@ -18,6 +18,7 @@ $products = get_products();
   <?php require "partials/header.php"; ?>
   <?php require "partials/productList.php"; ?>
   <?php require "partials/footer-no-catalog.php"; ?>
+
 </div>
 <?php require "partials/scripts.php"; ?>
 </body>

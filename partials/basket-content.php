@@ -55,10 +55,10 @@
 
     <?php else: ?>
 
-      <div class='bg-red-500 flex justify-center'>Корзина пуста</div>
+      <div class='bg-red-500 flex justify-center'>Войдите в аккаунт</div>
     <?php endif; ?>
     <?php else: ?>
-      <div class='bg-red-500 flex justify-center'>Войдите в аккаунт</div>
+      <div class='bg-red-500 flex justify-center'>Корзина пуста</div>
     <?php endif; ?>
   </div>
 </div>

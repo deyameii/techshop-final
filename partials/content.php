@@ -24,7 +24,6 @@
 </section>
 <!--hero-->
 
-<!--  TODO: carousel-->
 
 <div class="min-w-0 flex justify-center">
   <div class="swiper  w-full h-[800px]">
