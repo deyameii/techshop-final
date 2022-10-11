@@ -30,7 +30,7 @@
         товары</a>
     </li>
     <li class="mr-2">
-      <a href="#"
+      <a href="admin_panel3.php"
          class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Заказы</a>
     </li>
     <li class="mr-2">

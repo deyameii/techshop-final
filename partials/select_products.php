@@ -18,7 +18,7 @@ function get_products(): array
 }
 
 $rows = get_products();
-
+$r = 1;
 foreach ($rows as $row) {
   echo '<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">';
   $i = 0;
@@ -29,10 +29,11 @@ foreach ($rows as $row) {
     } else {
       echo "<td class='py-4 px-6'>$column</td>";
     }
+
   }
   echo '        <td class="py-4 px-6 text-right">
-          <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Изменить</a>
+          <a href="#" class="update-btn font-medium text-blue-600 dark:text-blue-500 hover:underline" data-modal-toggle="authentication-modal" data-id=' . $r . '>Изменить</a>
         </td>';
+  $r += 1;
   echo "</tr>";
 }
-?>
