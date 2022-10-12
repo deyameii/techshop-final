@@ -26,6 +26,5 @@ if (isset($_GET['cart'])) {
       }
       require __DIR__ . '/basket.php';
       break;
-
   }
 }

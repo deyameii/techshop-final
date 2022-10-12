@@ -12,8 +12,9 @@
       <?php endif; ?>
 
       <?php if (isset($_SESSION['user'])) : ?>
-        <li><a href=""><?php echo $_SESSION['user']['email']; ?></a></li>
-        <!--        --><?php //var_dump($_SESSION['user']); ?>
+        <li><a href="../account.php">Личный кабинет(<span
+              class='text-blue-400'><?php echo $_SESSION['user']['email']; ?></span>)</a>
+        </li>
         <?php if ($_SESSION['user']['is_admin'] == 1) : ?>
           <li><a href="../admin_panel.php">Панель управления</a></li>
         <?php endif; ?>

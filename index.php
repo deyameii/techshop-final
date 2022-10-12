@@ -5,12 +5,13 @@
 <?php require 'partials/head.php' ?>
 
 <body class="text-base m-0 min-h-full min-w-320 font-sans bg-[#111827]">
-<div class="overflow-hidden">
-  <?php require "partials/header.php"; ?>
-  <?php require "partials/content.php"; ?>
-  <?php require "partials/footer.php"; ?>
-</div>
+  <div class="overflow-hidden">
+    <?php require "partials/header.php"; ?>
+    <?php require "partials/content.php"; ?>
+    <?php require "partials/footer.php"; ?>
+  </div>
 
-<!--  scripts-->
-<?php require "partials/scripts.php"; ?>
+
+  <!--  scripts-->
+  <?php require "partials/scripts.php"; ?>
 </body>
