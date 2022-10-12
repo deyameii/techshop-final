@@ -35,7 +35,7 @@
       </svg>
       <span class="sr-only">Инфо</span>
       <div>
-        <span class="font-medium">Успех!</span> Товар успешно изменен.
+        <span class="font-medium">Успех!</span> Заказ успешно изменен.
       </div>
     </div>
   <?php endif; ?>
@@ -48,10 +48,10 @@
           Номер заказа
         </th>
         <th scope="col" class="py-3 px-6">
-          Email покупателя
+          Дата
         </th>
         <th scope="col" class="py-3 px-6">
-          Дата
+          Email покупателя
         </th>
         <th scope="col" class="py-3 px-6">
           статус
@@ -66,107 +66,46 @@
       </thead>
       <tbody>
 
-      <tr class="bg-white dark:bg-gray-800">
-        <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-          1
-        </th>
-        <td class="py-4 px-6">
-          alex@qwe.ru
-        </td>
-        <td class="py-4 px-6">
-          2022-10-11
-        </td>
-        <td class="py-4 px-6">
-          <span
-            class="bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">В обработке</span>
-
-        </td>
-        <td class="py-4 px-6 text-right">
-          <a href="#" class="update-btn font-medium text-blue-600 dark:text-blue-500 hover:underline"
-             data-modal-toggle="authentication-modal">Товары в чеке</a>
-        </td>
-        <td class="py-4 px-6 text-right">
-          <a href="#" class="update-btn font-medium text-blue-600 dark:text-blue-500 hover:underline"
-             data-modal-toggle="crypto-modal"
-          >Изменить статус</a>
-        </td>
-      </tr>
+      <?php
+      require 'select_orders.php';
+      ?>
       </tbody>
     </table>
   </div>
 
 
-  <!-- Main modal -->
-  <div id="authentication-modal" tabindex="-1" aria-hidden="true"
-       class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+  <!-- Товары в чеке -->
+  <div id="small-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
     <div class="relative p-4 w-full max-w-md h-full md:h-auto">
       <!-- Modal content -->
       <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-        <button type="button"
-                class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white"
-                data-modal-toggle="authentication-modal">
-          <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
-               xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd"
-                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                  clip-rule="evenodd"></path>
-          </svg>
-          <span class="sr-only">Close modal</span>
-        </button>
-        <div class="py-6 px-6 lg:px-8">
-          <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Изменить товар</h3>
-          <form class="space-y-6" action="../src/php/update_product.php" method='post'>
-            <div>
-              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Номер</label>
-              <label for="title">
-                <input type="text" name="id_product" id="id_product"
-                       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                       value="Номер товара">
-              </label>
-            </div>
-            <div>
-              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Название
-                товара</label>
-              <label for="title">
-                <input type="text" name="title" id="title"
-                       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                       required></label>
-            </div>
-            <div>
-              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Тип
-                товара</label>
-              <label for="type"><input type="text" name="type" id="type"
-                                       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                       required>
-              </label>
-            </div>
-            <div>
-              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Картинка</label>
-              <label for="img"><input type="text" name="img" id="img"
-                                      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                      required>
-              </label>
-            </div>
-            <div>
-              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Цена</label>
-              <label for="price"><input type="text" name="price" id="price"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                                        required>
-              </label>
-            </div>
-            <button type="submit"
-                    class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-              Изменить
-            </button>
-          </form>
+        <!-- Modal header -->
+        <div class="flex justify-between items-center p-5 rounded-t border-b dark:border-gray-600">
+          <h3 class="text-xl font-medium text-gray-900 dark:text-white">
+            Показать товары?
+          </h3>
+          <div>
+            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Номер чека</label>
+            <label for="title">
+              <input type="text" name="conf_id" id="conf_id"
+                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                     value="Номер чека">
+            </label>
+          </div>
+
+        </div>
+
+        <!-- Modal footer -->
+        <div class="flex items-center p-6 space-x-2 rounded-b border-t border-gray-200 dark:border-gray-600">
+          <button data-modal-toggle="small-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"> Показать</button>
+          <button data-modal-toggle="small-modal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Закрыть</button>
         </div>
       </div>
     </div>
   </div>
-</div>
 
 
-<!-- Main modal -->
+<!-- Изменить заказ -->
 <div id="crypto-modal" tabindex="-1" aria-hidden="true"
      class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center">
   <div class="relative p-4 w-full max-w-md h-full md:h-auto">
@@ -191,25 +130,23 @@
       </div>
       <!-- Modal body -->
       <div class="p-6">
-        <ul class="my-4 space-y-3 flex flex-col justify-center items-center">
-          <li>
-            <a href='#'> <span
-                class="status bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">В обработке</span></a>
-          </li>
-          <li>
-            <a href='#' id='status'>
-              <span
-                class="status bg-red-100 text-red-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-red-200 dark:text-red-900">Отменено</span>
-            </a>
-          </li>
-          <li>
-            <a href='#' id='status'>
-              <span
-                class="status bg-green-100 text-green-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-green-200 dark:text-green-900">Получен</span>
-            </a>
-          </li>
-        </ul>
-
+        <form action='src/php/set_status.php' method='post' class='flex flex-col gap-8'>
+          <div>
+            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Номер</label>
+            <label for="title">
+              <input type="text" name="id_productt" id="id_productt"
+                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                     value="">
+            </label>
+          </div>
+        <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Выберите статус заказа</label>
+        <select id="countries" name='product_status' class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          <option>Отменен</option>
+          <option>В обработке</option>
+          <option>Получен</option>
+        </select>
+        <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Применить</button>
+        </form>
       </div>
     </div>
   </div>

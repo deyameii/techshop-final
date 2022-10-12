@@ -1,11 +1,12 @@
-$(function () {
-  $('.status').click(function (e) {
-    $.ajax({
-      type: 'GET',
-      url: 'jax.php',
-      success: function (response) {
-        alert(response)
-      }
-    })
+console.log(123)
+$(function() {
+  $('.update-btn').on('click', function(e) {
+    let id = $(this).data('id') // получение id
+    $('#id_productt').val(id)
   })
+  $('.show_products').on('click', function(e) {
+    let id = $(this).data('id')
+    $('#conf_id').val(id)
+  })
+
 })
