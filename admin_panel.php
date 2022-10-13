@@ -8,8 +8,8 @@
 <div class="overflow-hidden">
   <?php require "partials/header.php"; ?>
   <?php require "partials/admin-content.php"; ?>
-
-</div>
+  
+  </div>
 <!--  scripts-->
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="src/js/swiper.js"></script>

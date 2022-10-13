@@ -10,7 +10,7 @@ $products = get_products();
 <?php require 'partials/head.php' ?>
 <div class='text-white text-sm font-medium'>
   <!--TODO убрать-->
-  <?php debug($_SESSION); //session_destroy(); ?>
+  <!--  --><?php //debug($_SESSION); //session_destroy(); ?>
 
 </div>
 <body class="text-base m-0 min-h-full min-w-320 font-sans bg-[#111827]">

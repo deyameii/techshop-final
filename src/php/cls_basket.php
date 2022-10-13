@@ -5,5 +5,5 @@ unset($_SESSION['cart.qty']);
 unset($_SESSION['cart.sum']);
 
 
-header('Location: ../../index.php');
+header('Location: ../../catalog.php');
 exit;
