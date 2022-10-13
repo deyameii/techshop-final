@@ -31,25 +31,6 @@
       <?php
       require 'get_personal_order.php';
       ?>
-
-      <!--        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">-->
-      <!--          <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">-->
-      <!--            12-->
-      <!--          </th>-->
-      <!--          <td class="py-4 px-6">-->
-      <!--            12.10.2022-->
-      <!--          </td>-->
-      <!--          <td class="py-4 px-6">-->
-      <!--            $2999-->
-      <!--          </td>-->
-      <!---->
-      <!--          <td class="py-4 px-6">-->
-      <!--            Статус заказа-->
-      <!--          </td>-->
-      <!--          <td class="py-4 px-6">-->
-      <!--            <a href='#' class='text-green-400'>чек</a>-->
-      <!--          </td>-->
-      <!--        </tr>-->
       </tbody>
     </table>
   </div>

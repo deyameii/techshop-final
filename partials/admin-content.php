@@ -34,8 +34,8 @@
          class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Заказы</a>
     </li>
     <li class="mr-2">
-      <a href="#"
-         class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Прочее</a>
+      <a href="../otchet.php"
+         class="inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 dark:hover:text-gray-300">Отчет</a>
     </li>
   </ul>
   <form action="../src/php/add_to_product.php" method="post" class='bg-white mt-6 p-10 rounded'>
